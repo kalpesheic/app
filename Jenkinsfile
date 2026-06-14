@@ -1,11 +1,6 @@
-node{
-  stage('SCM Checkout'){
-  git 'https://github.com/kalpesheic/app'
+node {
+    stage('Compile-Package') {
+        sh 'mvn clean package'
     }
-    stage ('Compile-Package'){
-           sh 'mvn-package'
-        
-        }
-        }
-           
-        
+}
+    
