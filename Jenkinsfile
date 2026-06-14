@@ -1,18 +1,9 @@
-pipeline {
-    agent any
-
-    stages {
-        stage('Build') {
-            steps {
-                sh 'mvn clean package'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                sh 'mvn test'
-            }
-        }
+node{
+    stage('SCM Checkout'){
+        git 'https://github.com/kalpesheic/app'
     }
-}
+    stage('Compile-Package'){
+          sh 'mvn package'
+          }
+          }
     
