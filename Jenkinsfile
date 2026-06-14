@@ -1,6 +1,18 @@
-node {
-    stage('Compile-Package') {
-        sh 'mvn clean package'
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
     }
 }
     
