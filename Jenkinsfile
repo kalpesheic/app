@@ -16,6 +16,6 @@ node {
            color: 'good', 
            message: 'welcome to slack', 
            tokenCredentialId: 'slack-demo'
-   }
+   },
        
     
