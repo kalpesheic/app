@@ -17,6 +17,5 @@ node {
            message: 'welcome to slack', 
            tokenCredentialId: 'slack-demo'
    }
-}
        
     
