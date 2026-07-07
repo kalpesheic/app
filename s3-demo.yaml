@@ -5,7 +5,7 @@ Parameters:
   BucketName:
     Type: String
     Description: Enter a globally unique S3 bucket name
-    Default: my-demo-bucket-12345
+    Default: my-demo-bucket-1234
 
 Resources:
   KPS3Bucket:
