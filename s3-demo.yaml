@@ -5,9 +5,10 @@ Parameters:
   BucketName:
     Type: String
     Description: Enter a globally unique S3 bucket name
+    Default: my-demo-bucket-12345
 
 Resources:
-  MyS3Bucket:
+  KPS3Bucket:
     Type: AWS::S3::Bucket
     Properties:
       BucketName: !Ref BucketName
@@ -31,12 +32,12 @@ Resources:
 Outputs:
   BucketName:
     Description: S3 Bucket Name
-    Value: !Ref MyS3Bucket
+    Value: !Ref KPS3Bucket
 
   BucketArn:
     Description: S3 Bucket ARN
-    Value: !GetAtt MyS3Bucket.Arn
+    Value: !GetAtt KPS3Bucket.Arn
 
   BucketDomainName:
     Description: S3 Bucket Domain Name
-    Value: !GetAtt MyS3Bucket.DomainName
+    Value: !GetAtt KPS3Bucket.DomainName
