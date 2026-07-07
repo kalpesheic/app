@@ -1,0 +1,42 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Create an S3 Bucket using CloudFormation
+
+Parameters:
+  BucketName:
+    Type: String
+    Description: Enter a globally unique S3 bucket name
+
+Resources:
+  MyS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref BucketName
+      VersioningConfiguration:
+        Status: Enabled
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        IgnorePublicAcls: true
+        BlockPublicPolicy: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      Tags:
+        - Key: Environment
+          Value: Dev
+        - Key: Project
+          Value: Demo
+
+Outputs:
+  BucketName:
+    Description: S3 Bucket Name
+    Value: !Ref MyS3Bucket
+
+  BucketArn:
+    Description: S3 Bucket ARN
+    Value: !GetAtt MyS3Bucket.Arn
+
+  BucketDomainName:
+    Description: S3 Bucket Domain Name
+    Value: !GetAtt MyS3Bucket.DomainName
