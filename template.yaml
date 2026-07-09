@@ -26,10 +26,9 @@ Resources:
   MyInstance:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-0123456789abcdef0
+      ImageId: ami-013e83f579886baeb
       InstanceType: !Ref InstanceType
       KeyName: !Ref KeyName
-      VpcId: !Ref VpcId
       SubnetId: !Ref SubnetId
       SecurityGroupIds:
         - !Ref SecurityGroupId
