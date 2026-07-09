@@ -1,5 +1,4 @@
 name: Deploy CloudFormation Stack
-
 on:
   push:
     branches:
@@ -42,10 +41,4 @@ jobs:
             --stack-name ${{ env.STACK_NAME }} \
             --template-file ${{ env.TEMPLATE_FILE }} \
             --capabilities CAPABILITY_NAMED_IAM \
-            --parameter-overrides \
-              VpcId=vpc-3973fe50 \
-              SubnetId=subnet-0965658684bc2ab3e \
-              SecurityGroupId=sg-044c542e58aeabf5f \
-              KeyName=kalpesh2026 \
-              InstanceType=t2.micro \
             --no-fail-on-empty-changeset
