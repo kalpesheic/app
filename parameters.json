@@ -5,7 +5,7 @@
   },
 
   {
-    "ParameterKey": "subnetId",
+    "ParameterKey": "SubnetId",
     "ParameterValue": "subnet-0965658684bc2ab3e"
   },
    
