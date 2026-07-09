@@ -1,0 +1,27 @@
+[
+  {
+    "ParameterKey": "VpcId",
+    "ParameterValue": "vpc-3973fe50"
+  },
+
+  {
+    "ParameterKey": "subnetId",
+    "ParameterValue": "subnet-0965658684bc2ab3e"
+  },
+   
+  {
+    "ParameterKey": "SecurityGroupId",
+    "ParameterValue": "sg-044c542e58aeabf5f"
+  },
+
+  
+  
+  {
+    "ParameterKey": "InstanceType",
+    "ParameterValue": "t2.micro"
+  },
+  {
+    "ParameterKey": "KeyName",
+    "ParameterValue": "kalpesh2026.pem"
+  }
+]

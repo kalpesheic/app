@@ -14,7 +14,7 @@ permissions:
 env:
   AWS_REGION: ap-south-1
   STACK_NAME: my-cloudformation-stack
-  TEMPLATE_FILE: s3-demo.yaml
+  TEMPLATE_FILE: template.yaml
 
 jobs:
   deploy:
